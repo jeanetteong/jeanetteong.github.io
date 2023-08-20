@@ -1,4 +1,5 @@
 const input = document.getElementById('word-input');
+const clear = document.getElementById('clear');
 const words_number = document.getElementById('words');
 const characters_number = document.getElementById('characters');
 let words = 0;
@@ -28,3 +29,7 @@ input.addEventListener('input', () => {     //everytime input updates
         characters_number.innerHTML = characters + ' characters';
     }
 });
+
+clear.addEventListener('click', () => {
+    location.reload();
+})

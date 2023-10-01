@@ -28,21 +28,6 @@
     box-shadow: 0px 8px #4c9967;
 }
 
-/*word counter*/
-.description {
-    font-style:italic;
-}
-
-#clear {
-    color:white;
-    background-color:#66cc8a;
-}
-
-#clear:hover {
-    background-color:#73e199;
-}
-
-
 #calculator {
     color:white;
     background-color:#377cfb;

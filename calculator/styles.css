@@ -13,3 +13,13 @@
 #clear:hover {
     background-color: rgb(233, 89, 89);
 }
+
+#previous-eqn {
+    background-color: khaki;
+    border-radius: 20px;
+    color:rgb(80, 80, 80)
+}
+
+.eqn {
+    color:gray
+}

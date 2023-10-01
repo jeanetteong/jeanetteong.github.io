@@ -1,0 +1,15 @@
+#calculate {
+    background-color: aquamarine;
+}
+
+#calculate:hover {
+    background-color: rgb(39, 255, 183);
+}
+
+#clear {
+    background-color: lightcoral;
+}
+
+#clear:hover {
+    background-color: rgb(233, 89, 89);
+}

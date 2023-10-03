@@ -45,11 +45,12 @@
     <script>
       const calculate = document.getElementById("calculate");
       const clear = document.getElementById("clear");
-
+      let count = 0;
       calculate.addEventListener("click", () => {
+        count++;
         const result = document.getElementById("input").value;
         // $(".output").append(`
-        // <div id="previous-eqn" class="col-10">
+        // <div id="previous-eqn" class="history col-10">
         //   <h3 class="pt-3 mx-3"><strong>${eval(result)}</strong></h3>
         //   <p class="eqn d-flex justify-content-end pb-3 mx-3">${result}</p>
         // </div>
@@ -58,7 +59,7 @@
         // Create a new div element
         var div = document.createElement("div");
         div.id = "previous-eqn";
-        div.className = "col-10";
+        div.className = "history col-10";
 
         // Create an h3 element for the result
         var h3 = document.createElement("h3");
@@ -82,6 +83,11 @@
 
         // Insert the new div before the first child of the output element
         outputElement.insertBefore(div, firstChild);
+
+        //make the other equations before the previous equation gray
+        if (count > 1) {
+          firstChild.id="";
+        }
       });
 
       clear.addEventListener("click", () => {

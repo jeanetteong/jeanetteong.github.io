@@ -10,15 +10,24 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="container">
       <h1 class="my-5 text-center">Select Difficulty</h1>
       <div class="d-flex flex-column mx-5">
-        <button type="button" class="btn btn-success py-3">EASY</button>
-        <button type="button" class="btn btn-warning text-white mt-3 py-3">MEDIUM</button>
-        <button type="button" class="btn btn-danger mt-3 py-3">DIFFICULT</button>
+        <button id="easy" type="button" class="btn btn-success py-3">
+          EASY
+        </button>
+        <button
+          id="medium"
+          type="button"
+          class="btn btn-warning text-white mt-3 py-3"
+        >
+          MEDIUM
+        </button>
+        <button id="hard" type="button" class="btn btn-danger mt-3 py-3">
+          HARD
+        </button>
       </div>
     </div>
     <script
@@ -26,6 +35,22 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script></script>
+    <script>
+      const easy = document.getElementById("easy");
+      const medium = document.getElementById("medium");
+      const hard = document.getElementById("hard");
+
+      easy.addEventListener("click", () => {
+        window.location.href = './aim-test.html?difficulty=easy';
+      });
+
+      medium.addEventListener("click", () => {
+        window.location.href = './aim-test.html?difficulty=medium';
+      });
+
+      hard.addEventListener("click", () => {
+        window.location.href = './aim-test.html?difficulty=hard';
+      });
+    </script>
   </body>
 </html>

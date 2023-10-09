@@ -1,6 +1,5 @@
 const url = new URL(window.location.href);
 const difficulty = url.searchParams.get('difficulty');
-console.log(difficulty);
 
 const timer = document.getElementById("timer");
 const end = document.getElementById("game-over");
@@ -10,6 +9,7 @@ const start = document.querySelector('.start');
 const gameContainer = document.querySelector('.game-container');
 let targetInterval;
 let target;
+let circleSize;
 
 start.addEventListener('click', () => {
     start.remove();
@@ -39,14 +39,21 @@ function createTarget() {
     }
     const containerWidth = gameContainer.offsetWidth;
     const containerHeight = gameContainer.offsetHeight;
+    if (difficulty == 'easy') {
+        circleSize = 45;
+    } else if (difficulty == 'medium') {
+        circleSize = 35;
+    } else {
+        circleSize = 20;
+    }
     const borderWidth = 20;
 
-    const randomTop = Math.floor(Math.random() * (containerHeight - 20 - 2 * borderWidth)) + borderWidth;
-    const randomLeft = Math.floor(Math.random() * (containerWidth - 20 - 2 * borderWidth)) + borderWidth;
+    const randomTop = Math.floor(Math.random() * (containerHeight - circleSize - 2 * borderWidth)) + borderWidth;
+    const randomLeft = Math.floor(Math.random() * (containerWidth - circleSize - 2 * borderWidth)) + borderWidth;
 
     target = document.createElement('div');
-    target.style.width = '20px';
-    target.style.height = '20px';
+    target.style.width = `${circleSize}px`;
+    target.style.height = `${circleSize}px`;
     target.style.borderRadius = '100%';
     target.style.position = 'absolute';
     target.style.backgroundColor = 'red';

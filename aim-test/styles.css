@@ -1,0 +1,14 @@
+.game-container {
+    width: 1110px;
+    height: 410px;
+    border: 10px solid #2196F3;
+    background-color: #f7f7f7;
+}
+
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

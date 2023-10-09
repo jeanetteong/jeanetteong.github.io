@@ -1,3 +1,7 @@
+const url = new URL(window.location.href);
+const difficulty = url.searchParams.get('difficulty');
+console.log(difficulty);
+
 const timer = document.getElementById("timer");
 const end = document.getElementById("game-over");
 let score = 0;
@@ -52,7 +56,7 @@ function createTarget() {
     target.addEventListener('mouseover', () => {
         target.style.cursor = 'pointer';
     });
-    
+
     target.addEventListener('click', incrementScore);
     gameContainer.appendChild(target);
 }

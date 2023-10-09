@@ -1,0 +1,415 @@
+@charset "utf-8";
+/*
+   Author: Jeanette Ong
+   Date: 7 August 2022  
+   
+   Filename: styles.css
+*/
+
+
+/*HTML Styles*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*Body Styles*/
+body {
+    margin: 0px auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgb(255, 252, 241);
+    width: 100%;
+}
+
+::selection {
+    color: white;
+    background-color: rgb(255, 198, 26);
+}
+
+
+/*Header Styles */
+.row {
+    position: relative;
+}
+
+.row.header {
+    padding-bottom: 300px;
+}
+
+.navigationBar {
+    background-image: url(../Images/header.jpg);
+    background-size: cover;
+    background-position: 50% 20%
+}
+
+
+/* Image Styles */
+.myImg {
+    position: relative;
+}
+
+.myImg div {
+    position: absolute;
+    top: 0;
+    left: 155px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.myImg:hover div {
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Section title Styles */
+.ccas {
+    margin-bottom: 300px;
+}
+
+.myExp {
+    padding-top: 150px;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.appear {
+    opacity: 1;
+}
+
+
+/* Animation Styles */
+.navbar {
+    animation: fadeIn 1.5s;
+}
+
+.in {
+    animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, fadeIn 2s;
+}
+
+.out {
+    animation: slide-left 1s ease both, fadeOut 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+
+/* Timetable Styles */
+.row>#timetable {
+    width: 80%;
+    margin-bottom: 200px;
+}
+
+.firstCol,
+.firstRow {
+    background-color: rgb(255, 217, 102);
+}
+
+.modules {
+    border: 2px outset rgb(255, 217, 102);
+    border-radius: 0%;
+}
+
+.fed:after {
+    content: 'Front-End Web Development';
+}
+
+.fed:hover:after {
+    content: 'Students will learn to use front-end web development frameworks to further enhance their ability for rapid prototyping responsive web application.';
+}
+
+.fed {
+    max-width: 200px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.fed:hover {
+    background-color: #beede5;
+}
+
+.cpr:after {
+    content: 'Communicating for Project Effectiveness';
+}
+
+.cpr:hover:after {
+    content: 'Students will be taught to pitch ideas or concepts and to write proposals to an intended audience.';
+}
+
+.cpr {
+    max-width: 150px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.cpr:hover {
+    background-color: #f7e5b7;
+}
+
+.math:after {
+    content: '';
+}
+
+.math:hover:after {
+    content: 'Students learn topics include matrices, linear transformation, number systems, set theory, logic, Boolean algebra, techniques of counting and probability.';
+}
+
+.math {
+    max-width: 120px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.math:hover {
+    background-color: #d7e2ea;
+}
+
+.fop:after {
+    content: 'Fundamentals of Programming'
+}
+
+.fop:hover:after {
+    content: 'Students will be taught programming fundamentals such as variables, data types, operators, control structures, methods and data structures such as arrays.';
+}
+
+.fop {
+    max-width: 200px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.fop:hover {
+    background-color: #9eddef;
+}
+
+.ecg:after {
+    content: 'Education and Career Guidance';
+}
+
+.ecg:hover:after {
+    content: 'Students learn how to make informed educational and career choices to achieve their career aspirations.';
+}
+
+.ecg {
+    max-width: 200px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.ecg:hover {
+    background-color: #ffdad1;
+}
+
+.cat:after {
+    content: 'Critical and Analytical Thinking';
+}
+
+.cat:hover:after {
+    content: 'Students are provided with opportunities to practise information literacy, and critical and analytical thinking through the exploration of contemporary local and global issues.';
+}
+
+.cat {
+    max-width: 200px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.cat:hover {
+    background-color: #cab3c1;
+}
+
+.foc:after {
+    content: 'Fundamentals of Computing';
+}
+
+.foc:hover:after {
+    content: 'Students will be taught on the use of various UNIX commands / system tools for user management, software installation, network administration and configuration of services.';
+}
+
+.foc {
+    max-width: 200px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.foc:hover {
+    background-color: #ffe4c9;
+}
+
+
+/*Carousel Styles */
+.experience {
+    background-image: linear-gradient(to bottom right, rgb(255, 217, 102), #fdb777);
+}
+
+
+/* Courses Styles */
+.dcitpHeader,
+.daaaHeader,
+.ditHeader,
+.dismHeader {
+    font-family: Impact;
+    font-weight: lighter;
+}
+
+.dcitp:hover,
+.daaa:hover,
+.dit:hover,
+.dism:hover {
+    opacity: 1;
+    background-color: white;
+    transition: 0.3s;
+}
+
+body:hover .dcitp:not(:hover),
+body:hover .daaa:not(:hover),
+body:hover .dism:not(:hover),
+body:hover .dit:not(:hover) {
+    opacity: 0.5;
+}
+
+
+/* Button Styles */
+.aboutMe {
+    color: white;
+    background-color: rgb(255, 217, 102);
+    border: 2px outset rgb(255, 217, 102);
+    border-radius: 25px;
+    font-family: Impact;
+    font-size: 1.25em;
+    width: 200px;
+    transition: width 1s;
+    transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    margin: 0 auto;
+}
+
+.aboutMe:hover {
+    background-color: rgb(255, 191, 0);
+    color: white;
+    width: 700px;
+}
+
+.careers {
+    color: white;
+    background-color: rgb(255, 217, 102);
+    border: 2px outset rgb(255, 217, 102);
+    font-family: Impact;
+    font-size: 1.25em;
+}
+
+.careerOptions {
+    margin-bottom: 200px;
+}
+
+
+/* Form Styles */
+#userInfo,
+#feedbackInfo {
+    margin-top: 200px;
+}
+
+
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background-color: white;
+    box-shadow: 2px 2px 6px;
+}
+
+.slider::-webkit-slider-thumb {
+    border-radius: 0%;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 217, 102);
+    border: 2px outset rgb(255, 217, 102);
+}
+
+
+/* Typewriter Styles */
+#type {
+    margin-bottom: 200px;
+}
+
+
+/* Footer Styles */
+.icons {
+    list-style-type: none;
+}
+
+.sp {
+    width: 250px;
+}
+
+.fa {
+    width: 50px;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+    color: white;
+}
+
+.fa-twitter {
+    color: white;
+}
+
+.fa-instagram {
+    color: white;
+}

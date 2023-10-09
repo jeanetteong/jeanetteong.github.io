@@ -53,3 +53,16 @@
     background-color:#e9755e;
     box-shadow: 0px 8px #e83a17;
 }
+
+#fed-ca2 {
+    color:white;
+    background-color: #333c4d;
+    border-radius: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s, cursor 0.3s;
+}
+
+#fed-ca2:hover {
+    cursor:pointer;
+    background-color:#4e5d77;
+    box-shadow: 0px 8px #273550;
+}

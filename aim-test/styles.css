@@ -3,16 +3,24 @@
     height: 410px;
     border: 10px solid #2196F3;
     background-color: #f7f7f7;
+    position: relative;
 }
 
-.vertical-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.target {
+.start {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
     background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start:hover {
+    cursor: pointer;
+}
+
+.target:hover {
+    cursor:pointer;
 }

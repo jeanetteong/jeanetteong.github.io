@@ -1,14 +1,18 @@
-const start = document.getElementById("start-button");
 const timer = document.getElementById("timer");
 const end = document.getElementById("game-over");
-const score = document.getElementById("score");
-const target = document.querySelector('.target');
+let score = 0;
+const start = document.querySelector('.start');
+// const target = document.querySelector('.target');
 const gameContainer = document.querySelector('.game-container');
+let targetInterval;
+let target;
 
 start.addEventListener('click', () => {
     start.remove();
+    createTarget();
     gameTimer = setInterval(updateTimer, 1000);
-    targetInterval = setInterval(createTarget, 3000);
+    targetInterval = setInterval(createTarget, 2000);
+    // Promise.all([targetInterval, gameTimer]);
 })
 
 function updateTimer() {
@@ -18,19 +22,55 @@ function updateTimer() {
     timer.innerHTML -= 1;
 }
 
-function createTarget() {
-    const maxX = 1185;
-    const maxY = gameContainer.clientHeight - target.clientHeight;
-    const randomX = 95 + Math.random() * maxX;
-    const randomY = Math.random() * maxY;
+target.addEventListener('click', () => {
+    score += 1;
+    document.getElementById('score').innerHTML = score;
+});
 
-    target.style.left = `${randomX}px`;
-    target.style.top = `${randomY}px`;
-    target.innerHTML = "test";
+function createTarget() {
+    // Remove the previous target element
+    if (target) {
+        target.removeEventListener('click', incrementScore);
+        gameContainer.removeChild(target);
+    }
+    const containerWidth = gameContainer.offsetWidth;
+    const containerHeight = gameContainer.offsetHeight;
+    const borderWidth = 20;
+
+    const randomTop = Math.floor(Math.random() * (containerHeight - 20 - 2 * borderWidth)) + borderWidth;
+    const randomLeft = Math.floor(Math.random() * (containerWidth - 20 - 2 * borderWidth)) + borderWidth;
+
+    target = document.createElement('div');
+    target.style.width = '20px';
+    target.style.height = '20px';
+    target.style.borderRadius = '100%';
+    target.style.position = 'absolute';
+    target.style.backgroundColor = 'red';
+    target.style.left = `${randomLeft}px`;
+    target.style.top = `${randomTop}px`;
+
+    target.addEventListener('mouseover', () => {
+        target.style.cursor = 'pointer';
+    });
+    
+    target.addEventListener('click', incrementScore);
+    gameContainer.appendChild(target);
+}
+
+function incrementScore() {
+    score += 1;
+    document.getElementById('score').innerHTML = score;
+    clearInterval(targetInterval);
+    createTarget();
+    targetInterval = setInterval(createTarget, 2000);
 }
 
 function endGame() {
     clearInterval(gameTimer);
-    alert("Game Over! Your score is " + score.innerHTML);
+    clearInterval(targetInterval);
+    if (target) {
+        target.removeEventListener('click', incrementScore);
+    }
+    alert("Game Over! Your score is " + document.getElementById('score').innerHTML);
     location.reload();
 }

@@ -66,3 +66,16 @@
     background-color:#4e5d77;
     box-shadow: 0px 8px #273550;
 }
+
+#ades-ca {
+    color:white;
+    background-color:#66cc8a;
+    border-radius: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s, cursor 0.3s;
+}
+
+#ades-ca:hover {
+    cursor:pointer;
+    background-color:#73e199;
+    box-shadow: 0px 8px #4c9967;
+}

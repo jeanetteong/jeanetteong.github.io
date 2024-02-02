@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'SQMarket';
+
+    src: url('../fonts/sqmarket-regular.woff') format('woff');
+}
+
+.website-logo {
+    width:10%;
+}
+
+body {
+    font-family: 'SQMarket';
+    color:#32414d;
+}
+
+.website-title {
+    font-weight: 300;
+    font-size: 2em;
+}
+
+.github-profile-link {
+    text-decoration: none;
+    color: #82a2c1;
+}

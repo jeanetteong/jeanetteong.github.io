@@ -22,3 +22,7 @@ body {
     text-decoration: none;
     color: #82a2c1;
 }
+
+.website-description p {
+    font-size: 1.57143em;
+}

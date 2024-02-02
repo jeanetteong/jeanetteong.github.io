@@ -5,12 +5,12 @@
 }
 
 .website-logo {
-    width:10%;
+    width: 10%;
 }
 
 body {
     font-family: 'SQMarket';
-    color:#2d3c48;
+    color: #2d3c48;
 }
 
 .website-title {
@@ -29,5 +29,46 @@ body {
 
 .subheading {
     font-size: 1.57143em;
-    font-weight:300;
+    font-weight: 300;
 }
+
+.project-name {
+    font-size: 1.14286em;
+    line-height: 0.5em;
+}
+
+.project-link,
+.project-link a {
+    color: #72b16e;
+    text-decoration: none;
+}
+
+.image-container {
+    position: relative;
+}
+
+.project-image {
+    width: 100%;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .project-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    color: #959ba2;
+  }
+  
+  .image-container:hover .project-image {
+    opacity: 0;
+  }
+  
+  .image-container:hover .project-info {
+    opacity: 1;
+  }
+  
+
+

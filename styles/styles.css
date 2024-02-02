@@ -10,7 +10,7 @@
 
 body {
     font-family: 'SQMarket';
-    color:#32414d;
+    color:#2d3c48;
 }
 
 .website-title {
@@ -20,9 +20,14 @@ body {
 
 .github-profile-link {
     text-decoration: none;
-    color: #82a2c1;
+    color: #3e8cb7;
 }
 
 .website-description p {
     font-size: 1.57143em;
+}
+
+.subheading {
+    font-size: 1.57143em;
+    font-weight:300;
 }

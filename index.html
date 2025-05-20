@@ -1,75 +1,320 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internette</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jeanette's space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="row d-flex align-items-center mt-5">
-            <img class="website-logo img-fluid col-2" src="./images/sung_jinwoo.jpg" />
-            <h1 class="website-title col-8">Jeanette's Website</h1>
-            <a class="github-profile-link col-2" href="https://github.com/jeanetteong">github.com/jeanetteong</a>
+    <header class="navbar">
+        <div class="navbar-left">
+            <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF605C" />
+            </svg>
+            <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FFBD44" />
+            </svg>
+            <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#00CA4E" />
+            </svg>
         </div>
-
-        <hr>
-
-        <div class="website-description m-5 text-center">
-            <p>As a Singapore Polytechnic student taking Diploma in Information Technology, here are some of the projects I have created
-                during my free time.</p>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+        <nav class="navbar-right">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#background">Background</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <hr>
-
-        <h3 class="sub-heading mt-5">Projects</h3>
-        <div class="projects">
-            <div class="row mt-4">
-                <div class="col-4">
-                    <h4 class="project-name">be-my-valentine</h4>
-                    <span class="project-link">
-                        <a href="https://jeanetteong.github.io/be-my-valentine/">Website</a>
-                        ·
-                        <a href="https://github.com/jeanetteong/be-my-valentine">Github</a>
-                    </span>
-                    <div class="image-container mt-1">
-                        <img class="project-image" src="./images/be-my-valentine.jpg">
-                        <div class="project-info">It was a silly trend on TikTok and I wanted to try it out myself.</div>
+    <section id="home" class="home-section">
+        <div class="home-container">
+            <div class="home-image">
+                <img src="images/my_pic.JPG" alt="My Pic" />
+            </div>
+            <div class="home-details">
+                <h1>Hi, I'm <span class="name">Jeanette!</span></h1>
+                <p>As a recent graduate from Singapore Polytechnic with a background in Information Technology, I'm
+                    excited to further my studies in programming, particularly in software engineering.</p>
+                <br />
+                <p>Outside of career and academics goals, I enjoy playing musical instruments, gaming, photography, and
+                    cycling!</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/jeanstography" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <svg width="35" height="35" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_11_251)">
+                                <path
+                                    d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z"
+                                    fill="#81A5F9" />
+                                <path
+                                    d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z"
+                                    fill="#81A5F9" />
+                                <path
+                                    d="M39.6937 11.1843C39.6937 12.778 38.4 14.0624 36.8156 14.0624C35.2219 14.0624 33.9375 12.7687 33.9375 11.1843C33.9375 9.59053 35.2313 8.30615 36.8156 8.30615C38.4 8.30615 39.6937 9.5999 39.6937 11.1843Z"
+                                    fill="#81A5F9" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_11_251">
+                                    <rect width="48" height="48" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jeanette-ong-322199235/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Linkedin">
+                        <svg width="35" height="35" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_11_250)">
+                                <path
+                                    d="M44.4469 0H3.54375C1.58437 0 0 1.54688 0 3.45938V44.5312C0 46.4437 1.58437 48 3.54375 48H44.4469C46.4062 48 48 46.4438 48 44.5406V3.45938C48 1.54688 46.4062 0 44.4469 0ZM14.2406 40.9031H7.11563V17.9906H14.2406V40.9031ZM10.6781 14.8688C8.39062 14.8688 6.54375 13.0219 6.54375 10.7437C6.54375 8.46562 8.39062 6.61875 10.6781 6.61875C12.9563 6.61875 14.8031 8.46562 14.8031 10.7437C14.8031 13.0125 12.9563 14.8688 10.6781 14.8688ZM40.9031 40.9031H33.7875V29.7656C33.7875 27.1125 33.7406 23.6906 30.0844 23.6906C26.3812 23.6906 25.8187 26.5875 25.8187 29.5781V40.9031H18.7125V17.9906H25.5375V21.1219H25.6312C26.5781 19.3219 28.9031 17.4188 32.3625 17.4188C39.5719 17.4188 40.9031 22.1625 40.9031 28.3313V40.9031Z"
+                                    fill="#81A5F9" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_11_250">
+                                    <rect width="48" height="48" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/jeanetteong" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <svg width="35" height="35" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_11_249)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M24.0199 0C10.7375 0 0 10.8167 0 24.1983C0 34.895 6.87988 43.9495 16.4241 47.1542C17.6174 47.3951 18.0545 46.6335 18.0545 45.9929C18.0545 45.4319 18.0151 43.509 18.0151 41.5055C11.3334 42.948 9.94198 38.6209 9.94198 38.6209C8.86818 35.8164 7.27715 35.0956 7.27715 35.0956C5.09022 33.6132 7.43645 33.6132 7.43645 33.6132C9.86233 33.7735 11.1353 36.0971 11.1353 36.0971C13.2824 39.7827 16.7422 38.7413 18.1341 38.1002C18.3328 36.5377 18.9695 35.456 19.6455 34.8552C14.3163 34.2942 8.70937 32.211 8.70937 22.9161C8.70937 20.2719 9.66321 18.1086 11.1746 16.4261C10.9361 15.8253 10.1008 13.3409 11.4135 10.0157C11.4135 10.0157 13.4417 9.3746 18.0146 12.4996C19.9725 11.9699 21.9916 11.7005 24.0199 11.6982C26.048 11.6982 28.1154 11.979 30.0246 12.4996C34.5981 9.3746 36.6262 10.0157 36.6262 10.0157C37.9389 13.3409 37.1031 15.8253 36.8646 16.4261C38.4158 18.1086 39.3303 20.2719 39.3303 22.9161C39.3303 32.211 33.7234 34.2539 28.3544 34.8552C29.2296 35.6163 29.9848 37.0583 29.9848 39.3421C29.9848 42.5871 29.9454 45.1915 29.9454 45.9924C29.9454 46.6335 30.383 47.3951 31.5758 47.1547C41.12 43.9491 47.9999 34.895 47.9999 24.1983C48.0392 10.8167 37.2624 0 24.0199 0Z"
+                                    fill="#81A5F9" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_11_249">
+                                    <rect width="48" height="48" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="background" class="background-section">
+        <h1>Background</h1>
+        <div class="background-container">
+            <div class="education-section">
+                <div class="education-title">
+                    <svg width="35" height="40" viewBox="0 0 50 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M45.4545 31.8889V16.1722L25 27.3333L0 13.6667L25 0L50 13.6667V31.8889H45.4545ZM25 41L9.09091 32.3444V20.9556L25 29.6111L40.9091 20.9556V32.3444L25 41Z"
+                            fill="#81A5F9" />
+                    </svg>
+                    <h2>Education</h2>
+                </div>
+                <div class="timeline-box">
+                    <div class="timeline-content">
+                        <div class="circle"></div>
+                        <div class="content-box" id="open-ctss">
+                            <div class="date">
+                                2018-2021
+                            </div>
+                            <h3>O Levels - Clementi Town Secondary School</h3>
+                            <p>I was first introduced to programming during my time there, which sparked my interest in
+                                technology and problem-solving. This experience strengthened my decision to pursue IT in
+                                polytechnic.</p>
+                            <p><span class="more-info">Click to find out more!</span></p>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="circle"></div>
+                        <div class="content-box" id="open-sp">
+                            <div class="date">
+                                2022-2025
+                            </div>
+                            <h3>Diploma in Information Technology - Singapore Polytechnic</h3>
+                            <p>My time in polytechnic deepened my understanding of core IT concepts like programming,
+                                web development, and cybersecurity. It was also where I gained hands-on experience
+                                through various projects, which helped me improve my technical and soft skills.</p>
+                            <p><span class="more-info">Click to find out more!</span></p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-4">
-                    <h4 class="project-name">future-project</h4>
-                    <span class="project-link">
-                        <a href="https://jeanetteong.github.io/">Website</a>
-                        ·
-                        <a href="https://jeanetteong.github.io/">Github</a>
-                    </span>
-                    <div class="image-container mt-1">
-                        <img class="project-image" src="./images/sung_jinwoo2.jpg">
-                        <div class="project-info">For my future self</div>
-                    </div>
+            </div>
+            <div class="experience-section">
+                <div class="experience-title">
+                    <svg width="30" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.16667 39.5833C3.02083 39.5833 2.04028 39.1757 1.225 38.3604C0.409722 37.5451 0.00138889 36.5639 0 35.4167V12.5C0 11.3542 0.408334 10.3736 1.225 9.55833C2.04167 8.74305 3.02222 8.33472 4.16667 8.33333H12.5V4.16667C12.5 3.02083 12.9083 2.04028 13.725 1.225C14.5417 0.409722 15.5222 0.00138889 16.6667 0H25C26.1458 0 27.1271 0.408333 27.9438 1.225C28.7604 2.04167 29.1681 3.02222 29.1667 4.16667V8.33333H37.5C38.6458 8.33333 39.6271 8.74167 40.4438 9.55833C41.2604 10.375 41.6681 11.3556 41.6667 12.5V35.4167C41.6667 36.5625 41.259 37.5437 40.4438 38.3604C39.6285 39.1771 38.6472 39.5847 37.5 39.5833H4.16667ZM16.6667 8.33333H25V4.16667H16.6667V8.33333Z"
+                            fill="#81A5F9" />
+                    </svg>
+                    <h2>Experience</h2>
                 </div>
-
-                <div class="col-4">
-                    <h4 class="project-name">future-project</h4>
-                    <span class="project-link">
-                        <a href="https://jeanetteong.github.io/">Website</a>
-                        ·
-                        <a href="https://jeanetteong.github.io/">Github</a>
-                    </span>
-                    <div class="image-container mt-1">
-                        <img class="project-image" src="./images/sung_jinwoo3.jpg">
-                        <div class="project-info">For my future self</div>
+                <div class="timeline-box">
+                    <div class="timeline-content">
+                        <div class="circle"></div>
+                        <div class="content-box" id="open-accenture">
+                            <div class="date">
+                                Mar 2024 - Jan 2025
+                            </div>
+                            <h3>Internship - Accenture</h3>
+                            <p>My 44-week internship with Accenture gave me valuable insight into what it's like to work
+                                in the tech industry. It taught me the importance of self-learning, adaptability, and
+                                seeking guidance to grow in a fast-paced environment.</p>
+                            <p><span class="more-info">Click to find out more!</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="pictures-section">
+            <div class="pictures-title">
+                <svg width="40" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10.4167 43.75C9.27083 43.75 8.29028 43.3424 7.475 42.5271C6.65972 41.7118 6.25139 40.7306 6.25 39.5833V10.4167C6.25 9.27083 6.65833 8.29028 7.475 7.475C8.29167 6.65972 9.27222 6.25139 10.4167 6.25H39.5833C40.7292 6.25 41.7104 6.65833 42.5271 7.475C43.3438 8.29167 43.7514 9.27222 43.75 10.4167V39.5833C43.75 40.7292 43.3424 41.7104 42.5271 42.5271C41.7118 43.3438 40.7306 43.7514 39.5833 43.75H10.4167ZM12.5 35.4167H37.5L29.6875 25L23.4375 33.3333L18.75 27.0833L12.5 35.4167Z"
+                        fill="#81A5F9" />
+                </svg>
+                <h2>Life in Pictures!</h2>
+            </div>
+            <div class="pictures-container" id="auto-scroll">
+                <img src="/images/disneyland.JPG" alt="HK Disneyland" draggable="false" />
+                <img src="/images/grad_with_friends.JPG" alt="Graduation" draggable="false" />
+                <img src="/images/grad_with_more_friends.JPG" alt="Graduation" draggable="false" />
+                <img src="/images/korea.JPG" alt="Korea Trip" draggable="false" />
+                <img src="/images/chiangmai.jpg" alt="Chiang Mai Trip" draggable="false" />
+                <img src="/images/jb.JPG" alt="JB Trip" draggable="false" />
+                <img src="/images/me_with_cat.JPG" alt="Cat" draggable="false" />
+                <img src="/images/japan.jpg" alt="Japan Trip" draggable="false" />
+                <img src="/images/faciliator.jpg" alt="Freshmen Orientation Camp Faciliators" draggable="false" />
+                <img src="/images/lex.jpg" alt="Learning Express in Danang" draggable="false" />
+                <img src="/images/cycling.jpg" alt="Cycling" draggable="false" />
+
+            </div>
+        </div>
+    </section>
+    <div class="modal-container" id="modal-ctss">
+        <div class="modal">
+            <h1>Fun Facts!</h1>
+            <ul>
+                <li>Grades - L1R4: 13, L1R5: 16</li>
+                <li>Was assisstant section leader as a percussionist in Symphonic Band</li>
+                <li>Won Gold in Singapore International Band Festival (SIBF) 2018</li>
+                <li>Won 2nd place in a basketball inter-class competition</li>
+                <li>Took O Level Computing where I learnt <b>Python</b> and <b>Excel</b></li>
+                <li>Participated in the National Olympiad in Informatics (NOI) which made me learn about <b>data
+                        structures & algorithms</b></li>
+            </ul>
+            <button class="close-button" id="close-ctss">Close me</button>
+        </div>
     </div>
+    <div class="modal-container" id="modal-sp">
+        <div class="modal">
+            <h1>Fun Facts!</h1>
+            <ul>
+                <li>GPA: <b>3.74</b></li>
+                <li>Participated in Shoppee Code League</li>
+                <li>Won 3rd place in my school's coding competition</li>
+                <li>Was a games facilitator for freshmen orientation camp</li>
+                <li>Travelled to Danang, Vietnam for 12 days to work on a sustainable innovation project for local
+                    farmers</li>
+                <li>Learnt new programming languages and skills mentioned in the next section!</li>
+            </ul>
+            <button class="close-button" id="close-sp">Close me</button>
+        </div>
+    </div>
+    <div class="modal-container" id="modal-accenture">
+        <div class="modal">
+            <h1>Fun Facts!</h1>
+            <ul>
+                <li>Responsible for back-end development and quality assurance</li>
+                <li>Developed APIs using <b>Java Spring Boot</b></li>
+                <li>Automated API tests using <b>Python Robot Framework</b></li>
+                <li>Contributed to my project's go-live!</li>
+            </ul>
+            <button class="close-button" id="close-accenture">Close me</button>
+        </div>
+    </div>
+    <section id="skills" class="skills-section">
+        <h1>Skills</h1>
+        <div class="skills-container">
+            <div class="frontend-section">
+                <div class="frontend-title">
+                    <svg width="30" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.8333 41.6667C17.9861 41.6667 15.2951 41.1194 12.7604 40.025C10.2257 38.9306 8.0125 37.4375 6.12083 35.5458C4.22917 33.6542 2.73611 31.441 1.64167 28.9063C0.547222 26.3715 0 23.6806 0 20.8333C0 17.9514 0.564583 15.2431 1.69375 12.7083C2.82292 10.1736 4.35069 7.96875 6.27708 6.09375C8.20347 4.21875 10.4514 2.73472 13.0208 1.64167C15.5903 0.548611 18.3333 0.00138889 21.25 0C24.0278 0 26.6493 0.477778 29.1146 1.43333C31.5799 2.38889 33.7417 3.70833 35.6 5.39167C37.4583 7.075 38.934 9.07153 40.0271 11.3813C41.1201 13.691 41.6667 16.1819 41.6667 18.8542C41.6667 22.8472 40.4514 25.9118 38.0208 28.0479C35.5903 30.184 32.6389 31.2514 29.1667 31.25H25.3125C25 31.25 24.7833 31.3368 24.6625 31.5104C24.5417 31.684 24.4806 31.875 24.4792 32.0833C24.4792 32.5 24.7396 33.0993 25.2604 33.8813C25.7813 34.6632 26.0417 35.5569 26.0417 36.5625C26.0417 38.2986 25.5646 39.5833 24.6104 40.4167C23.6563 41.25 22.3972 41.6667 20.8333 41.6667ZM9.375 22.9167C10.2778 22.9167 11.0243 22.6215 11.6146 22.0313C12.2049 21.441 12.5 20.6944 12.5 19.7917C12.5 18.8889 12.2049 18.1424 11.6146 17.5521C11.0243 16.9618 10.2778 16.6667 9.375 16.6667C8.47222 16.6667 7.7257 16.9618 7.13542 17.5521C6.54514 18.1424 6.25 18.8889 6.25 19.7917C6.25 20.6944 6.54514 21.441 7.13542 22.0313C7.7257 22.6215 8.47222 22.9167 9.375 22.9167ZM15.625 14.5833C16.5278 14.5833 17.2743 14.2882 17.8646 13.6979C18.4549 13.1076 18.75 12.3611 18.75 11.4583C18.75 10.5556 18.4549 9.80903 17.8646 9.21875C17.2743 8.62847 16.5278 8.33333 15.625 8.33333C14.7222 8.33333 13.9757 8.62847 13.3854 9.21875C12.7951 9.80903 12.5 10.5556 12.5 11.4583C12.5 12.3611 12.7951 13.1076 13.3854 13.6979C13.9757 14.2882 14.7222 14.5833 15.625 14.5833ZM26.0417 14.5833C26.9444 14.5833 27.691 14.2882 28.2813 13.6979C28.8715 13.1076 29.1667 12.3611 29.1667 11.4583C29.1667 10.5556 28.8715 9.80903 28.2813 9.21875C27.691 8.62847 26.9444 8.33333 26.0417 8.33333C25.1389 8.33333 24.3924 8.62847 23.8021 9.21875C23.2118 9.80903 22.9167 10.5556 22.9167 11.4583C22.9167 12.3611 23.2118 13.1076 23.8021 13.6979C24.3924 14.2882 25.1389 14.5833 26.0417 14.5833ZM32.2917 22.9167C33.1944 22.9167 33.941 22.6215 34.5313 22.0313C35.1215 21.441 35.4167 20.6944 35.4167 19.7917C35.4167 18.8889 35.1215 18.1424 34.5313 17.5521C33.941 16.9618 33.1944 16.6667 32.2917 16.6667C31.3889 16.6667 30.6424 16.9618 30.0521 17.5521C29.4618 18.1424 29.1667 18.8889 29.1667 19.7917C29.1667 20.6944 29.4618 21.441 30.0521 22.0313C30.6424 22.6215 31.3889 22.9167 32.2917 22.9167Z"
+                            fill="#81A5F9" />
+                    </svg>
+                    <h2>Frontend</h2>
+                </div>
+                <div class="tags">
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">React Native</span>
+                </div>
+            </div>
+            <div class="backend-section">
+                <div class="backend-title">
+                    <svg width="30" height="42" viewBox="0 0 41 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.2694 28.125C18.3356 28.125 16.4809 27.3568 15.1135 25.9893C13.746 24.6219 12.9778 22.7672 12.9778 20.8333C12.9778 18.8995 13.746 17.0448 15.1135 15.6774C16.4809 14.3099 18.3356 13.5417 20.2694 13.5417C22.2033 13.5417 24.058 14.3099 25.4254 15.6774C26.7929 17.0448 27.5611 18.8995 27.5611 20.8333C27.5611 22.7672 26.7929 24.6219 25.4254 25.9893C24.058 27.3568 22.2033 28.125 20.2694 28.125ZM35.7486 22.8542C35.8319 22.1875 35.8944 21.5208 35.8944 20.8333C35.8944 20.1458 35.8319 19.4583 35.7486 18.75L40.1444 15.3542C40.5403 15.0417 40.6444 14.4792 40.3944 14.0208L36.2278 6.8125C35.9778 6.35417 35.4153 6.16667 34.9569 6.35417L29.7694 8.4375C28.6861 7.625 27.5611 6.91667 26.2486 6.39584L25.4778 0.875004C25.4355 0.629623 25.3076 0.407143 25.117 0.246986C24.9263 0.0868288 24.6851 -0.000666197 24.4361 3.81973e-06H16.1028C15.5819 3.81973e-06 15.1444 0.375004 15.0611 0.875004L14.2903 6.39584C12.9778 6.91667 11.8528 7.625 10.7694 8.4375L5.58194 6.35417C5.12361 6.16667 4.56111 6.35417 4.31111 6.8125L0.144441 14.0208C-0.126393 14.4792 -0.0013923 15.0417 0.394441 15.3542L4.79027 18.75C4.70694 19.4583 4.64444 20.1458 4.64444 20.8333C4.64444 21.5208 4.70694 22.1875 4.79027 22.8542L0.394441 26.3125C-0.0013923 26.625 -0.126393 27.1875 0.144441 27.6458L4.31111 34.8542C4.56111 35.3125 5.12361 35.4792 5.58194 35.3125L10.7694 33.2083C11.8528 34.0417 12.9778 34.75 14.2903 35.2708L15.0611 40.7917C15.1444 41.2917 15.5819 41.6667 16.1028 41.6667H24.4361C24.9569 41.6667 25.3944 41.2917 25.4778 40.7917L26.2486 35.2708C27.5611 34.7292 28.6861 34.0417 29.7694 33.2083L34.9569 35.3125C35.4153 35.4792 35.9778 35.3125 36.2278 34.8542L40.3944 27.6458C40.6444 27.1875 40.5403 26.625 40.1444 26.3125L35.7486 22.8542Z"
+                            fill="#81A5F9" />
+                    </svg>
+                    <h2>Backend</h2>
+                </div>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Robot Framework</span>
+                    <span class="tag">J2EE</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">MS SQL</span>
+                </div>
+            </div>
+        </div>
+        <div class="others-section">
+            <div class="others-title">
+                <svg width="30" height="46" viewBox="0 0 42 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20.8333 0C32.3396 0 41.6667 9.32708 41.6667 20.8333C41.6667 32.3396 32.3396 41.6667 20.8333 41.6667C9.32708 41.6667 0 32.3396 0 20.8333C0 9.32708 9.32708 0 20.8333 0ZM30.2083 17.7083C29.3795 17.7083 28.5847 18.0376 27.9986 18.6236C27.4126 19.2097 27.0833 20.0045 27.0833 20.8333C27.0833 21.6621 27.4126 22.457 27.9986 23.043C28.5847 23.6291 29.3795 23.9583 30.2083 23.9583C31.0371 23.9583 31.832 23.6291 32.418 23.043C33.0041 22.457 33.3333 21.6621 33.3333 20.8333C33.3333 20.0045 33.0041 19.2097 32.418 18.6236C31.832 18.0376 31.0371 17.7083 30.2083 17.7083ZM20.8333 17.7083C20.0045 17.7083 19.2097 18.0376 18.6236 18.6236C18.0376 19.2097 17.7083 20.0045 17.7083 20.8333C17.7083 21.6621 18.0376 22.457 18.6236 23.043C19.2097 23.6291 20.0045 23.9583 20.8333 23.9583C21.6621 23.9583 22.457 23.6291 23.043 23.043C23.6291 22.457 23.9583 21.6621 23.9583 20.8333C23.9583 20.0045 23.6291 19.2097 23.043 18.6236C22.457 18.0376 21.6621 17.7083 20.8333 17.7083ZM11.4583 17.7083C10.6295 17.7083 9.83468 18.0376 9.24862 18.6236C8.66257 19.2097 8.33333 20.0045 8.33333 20.8333C8.33333 21.6621 8.66257 22.457 9.24862 23.043C9.83468 23.6291 10.6295 23.9583 11.4583 23.9583C12.2871 23.9583 13.082 23.6291 13.668 23.043C14.2541 22.457 14.5833 21.6621 14.5833 20.8333C14.5833 20.0045 14.2541 19.2097 13.668 18.6236C13.082 18.0376 12.2871 17.7083 11.4583 17.7083Z"
+                        fill="#81A5F9" />
+                </svg>
+                <h2>Others</h2>
+            </div>
+            <div class="tags">
+                <span class="tag">Git</span>
+                <span class="tag">AWS</span>
+                <span class="tag">Android Studio</span>
+                <span class="tag">Figma</span>
+                <span class="tag">Adobe Illustrator</span>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h1>Let's Connect!</h1>
+        <p class="description">Whether you have a question, a suggestion, or just want to say hi, feel free to reach
+            out. I'm always open to
+            new opportunities, collaborations, or a friendly chat about tech or anything interesting!</p>
+        <div class="image-container">
+            <img src="images/icon.png" alt="Icon" />
+        </div>
+        <p class="thank-you">Thanks for visiting my website :)</p>
+        <div class="email-container">
+            <a href="mailto:jeanetteongjx@hotmail.com">
+                <button class="email-button">Send Me an Email!</button>
+            </a>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
+
 </html>

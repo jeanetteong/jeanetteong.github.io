@@ -1,2 +1,2 @@
-## my project dump!
-can be accessed via https://jeanetteong.github.io/
+## my portfolio!
+learn more about me here! ==> https://jeanetteong.github.io/

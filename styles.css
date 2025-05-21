@@ -470,17 +470,18 @@ section {
     padding: 5px 12px;
     background-color: white;
     color: #555;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     font-size: 20px;
     font-weight: 500;
     white-space: nowrap;
     box-shadow: 0px 2px 0 rgba(0, 0, 0, 0.2);
     cursor: default;
-    transition: transform 0.2s ease;
+    transition: transform 0.1s ease-out;
 }
 
 .tag:hover {
-    transform: translateY(5px);
+    transform: translateY(4px);
 }
 
 /*Contact Page Styling*/

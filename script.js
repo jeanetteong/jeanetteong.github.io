@@ -227,3 +227,100 @@ container.querySelectorAll('img').forEach(img => {
 cloneImages();
 startAutoScroll();
 container.style.cursor = 'grab';
+
+//audio play
+const noteFiles = [
+  'audios/C6.mp3',
+  'audios/D6.mp3',
+  'audios/E6.mp3',
+  'audios/F6.mp3',
+  'audios/G6.mp3',
+  'audios/A6.mp3',
+  'audios/B6.mp3'
+];
+
+const clickNavbarSound = new Howl({
+  src: ['audios/click_navbar.mp3'],
+  volume: 0.4
+});
+
+const clickSound = new Howl({
+  src: ['audios/click.mp3'],
+  volume: 0.4
+});
+
+const clickButtonSound = new Howl({
+  src: ['audios/click_button.mp3'],
+  volume: 0.4
+});
+
+const closeSound = new Howl({
+  src: ['audios/close.mp3'],
+  volume: 0.4
+});
+
+const notes = noteFiles.map(file => new Howl({ src: [file], volume: 0.6 }));
+let currentNoteIndex = 0;
+let audioEnabled = false;
+
+const enableAudio = () => {
+  audioEnabled = true;
+  document.removeEventListener('click', enableAudio);
+  console.log('Audio unlocked!');
+};
+
+document.addEventListener('click', enableAudio);
+
+//skills tag
+document.querySelectorAll('.tag').forEach(tag => {
+  tag.addEventListener('mouseenter', () => {
+    if (!audioEnabled) return;
+    notes[currentNoteIndex].play();
+    currentNoteIndex = (currentNoteIndex + 1) % notes.length;
+  });
+});
+
+//navbar hover
+document.querySelectorAll('.navbar-right a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (audioEnabled) {
+        clickNavbarSound.play();
+      }
+    });
+  });
+
+//content box click
+document.querySelectorAll('.content-box').forEach(link => {
+  link.addEventListener('click', () => {
+      if (audioEnabled) {
+        clickSound.play();
+      }
+    });
+});
+
+//close button
+document.querySelectorAll('.close-button').forEach(link => {
+  link.addEventListener('click', () => {
+      if (audioEnabled) {
+        closeSound.play();
+      }
+    });
+});
+
+//social icons
+document.querySelectorAll('.social-icons a').forEach(link => {
+  link.addEventListener('click', () => {
+      if (audioEnabled) {
+        clickButtonSound.play();
+      }
+    });
+});
+
+//email button
+document.querySelectorAll('.email-button').forEach(link => {
+  link.addEventListener('click', () => {
+      if (audioEnabled) {
+        clickButtonSound.play();
+      }
+    });
+});

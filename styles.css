@@ -20,6 +20,58 @@ section {
     background-color: #F5F7FA
 }
 
+/*Sound Modal Styling*/
+.modal-sound-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+.modal-sound-container.disappear {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.modal-sound {
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px 40px;
+    width: 600px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.modal-sound h1 {
+    color: #2E2E2E;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.modal-sound img {
+    width: 300px;
+    height: 300px;
+}
+
+.modal-sound p {
+    color: #2E2E2E;
+    font-size: 18px;
+}
+
+.close-popup {
+    color: #555;
+    font-size: 13px;
+    padding-top: 30px;
+}
+
 /* Navbar styling */
 .navbar {
     display: flex;
@@ -598,6 +650,11 @@ section {
 /* Tablet Sizing*/
 @media (max-width: 991px) {
 
+    /*Sound Modal Styling*/
+    .modal-sound-container {
+        opacity: 0;
+    }
+
     /*Home Page Styling*/
     .home-section {
         padding-top: 50px;
@@ -657,6 +714,11 @@ section {
 
 /*Larger Phone Sizing*/
 @media (max-width: 767px) {
+
+    /*Sound Modal Styling*/
+    .modal-sound-container {
+        opacity: 0;
+    }
 
     /*Home Page Styling*/
     .home-section {
@@ -888,6 +950,11 @@ section {
 
 /*Phone Sizing*/
 @media (max-width: 575px) {
+
+    /*Sound Modal Styling*/
+    .modal-sound-container {
+        opacity: 0;
+    }
 
     /*Home Page Styling*/
     .home-section {

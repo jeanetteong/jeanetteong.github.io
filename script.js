@@ -8,12 +8,41 @@ const openAccenture = document.getElementById('open-accenture');
 const modalCtss = document.getElementById('modal-ctss');
 const modalSp = document.getElementById('modal-sp');
 const modalAccenture = document.getElementById('modal-accenture');
+const modalSound = document.getElementById('modal-sound');
 
 const closeCtss = document.getElementById('close-ctss');
 const closeSp = document.getElementById('close-sp');
 const closeAccenture = document.getElementById('close-accenture');
 
 const container = document.getElementById('auto-scroll');
+
+//startup modal
+function updateScrollBasedOnModal() {
+
+  if (window.innerWidth <= 991) return;
+  const opacity = parseFloat(getComputedStyle(modalSound).opacity);
+
+  if (opacity === 1) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+}
+
+
+document.addEventListener('click', function () {
+  if (window.innerWidth <= 991) return;
+  modalSound.style.opacity = '0';
+
+  setTimeout(() => {
+    modalSound.style.display = 'none';
+    updateScrollBasedOnModal();
+  }, 300);
+});
+
+updateScrollBasedOnModal();
+
+
 
 //navbar scroll spy
 const thresholdValue = window.innerWidth <= 1199 ? 0.4 : 0.5;
@@ -282,45 +311,45 @@ document.querySelectorAll('.tag').forEach(tag => {
 
 //navbar hover
 document.querySelectorAll('.navbar-right a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (audioEnabled) {
-        clickNavbarSound.play();
-      }
-    });
+  link.addEventListener('click', () => {
+    if (audioEnabled) {
+      clickNavbarSound.play();
+    }
   });
+});
 
 //content box click
 document.querySelectorAll('.content-box').forEach(link => {
   link.addEventListener('click', () => {
-      if (audioEnabled) {
-        clickSound.play();
-      }
-    });
+    if (audioEnabled) {
+      clickSound.play();
+    }
+  });
 });
 
 //close button
 document.querySelectorAll('.close-button').forEach(link => {
   link.addEventListener('click', () => {
-      if (audioEnabled) {
-        closeSound.play();
-      }
-    });
+    if (audioEnabled) {
+      closeSound.play();
+    }
+  });
 });
 
 //social icons
 document.querySelectorAll('.social-icons a').forEach(link => {
   link.addEventListener('click', () => {
-      if (audioEnabled) {
-        clickButtonSound.play();
-      }
-    });
+    if (audioEnabled) {
+      clickButtonSound.play();
+    }
+  });
 });
 
 //email button
 document.querySelectorAll('.email-button').forEach(link => {
   link.addEventListener('click', () => {
-      if (audioEnabled) {
-        clickButtonSound.play();
-      }
-    });
+    if (audioEnabled) {
+      clickButtonSound.play();
+    }
+  });
 });
